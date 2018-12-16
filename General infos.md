@@ -7,6 +7,7 @@ The first thing that has to be said here is: Right at the moment, there is no kn
 Regarding the LG G7 rooting, there is a significant bootstrapping problem at the moment:
 Even though the bootloader is unlocked, we're still not able to obtain a boot image to modify,
 because we still cannot get raw access to any of the partitions, without either
+
 	1. unpacking a dumped KDZ file that is obtained by scraping the cache of LG bridge (Winodws and Mac)
 	2. Opening up the hardware and access the chip directly
 	3. Exploiting Android
