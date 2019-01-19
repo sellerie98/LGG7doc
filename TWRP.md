@@ -25,9 +25,7 @@ If you cannot find it in the repos of your distro, you can still get it from [he
 
 After getting this tool, get the minimal manifest linked in the guide (branch android-8.0), by following the procedures listed in the README of it.
 
-When this is done, create the folders `device/lge/judy` (`mkdir -p device/lge/judy`) in the same folder you downloaded the manifest into.
-
-Navigate into `device/lge/judy` and clone the following repo into the folder: `https://github.com/sellerie98/android_device_lge_judy`.
+Clone the following repo into the folder: `https://github.com/sellerie98/android_device_lge_judy device/lge/judy`.
 
 ### Building
 Now go back and setup the build enviroment:
