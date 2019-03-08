@@ -29,12 +29,12 @@ Clone the following repo into the folder: `git clone https://github.com/sellerie
 
 ### Building
 Now go back and setup the build enviroment:
-	- `sudo apt install ccache` (This step is optional, but speeds up recompilations immensely, also it's only needed if its not installed yet)
-	- `export LC_ALL=C`
-	- `export USE_CCACHE=1` (Only do this if you decided to use ccache and have it installed)
-	- `. ./build/envsetup.sh`
-	- `lunch omni_judy-eng`
-	- `make bootimage -j?` (Replace the ? with the number of the threads the device you're currently building on has +1)
+ - run: `sudo apt install ccache` (This step is optional, but speeds up recompilations immensely, also it's only needed if its not installed yet)
+ - export: `export LC_ALL=C`
+ - export: `export USE_CCACHE=1` (Only do this if you decided to use ccache and have it installed)
+ - run: `. ./build/envsetup.sh`
+ - enter command: `lunch omni_judy-eng`
+ - run: `make bootimage -j?` (Replace the ? with the number of the threads the device you're currently building on has +1)
 
 This will take a while, but after that, you should have a bootimage.
 This bootimage will most probably not work, so don't flash it yet! 
@@ -43,8 +43,8 @@ This bootimage will most probably not work, so don't flash it yet!
 You need to modify any original boot image to make it work.
 You can obtain these by getting a KDZ file (e.g. the one that autoprime posted [here](https://forum.xda-developers.com/lg-g7-thinq/development/dump-g7-stock-vendor-t3840834) and extracting it with kdztools mentioned in the 'General infos.md' file.
 For that we use `abootimg`:
-	- Create an empty folder and copy the twrp image and the original boot image into it
-	- extract the twrp image: `abootimx -x <twrp image>
-	- replace the initrd in the original image with TWRP: `abootimg -u <original image> -r initrd.img`
+ - Create an empty folder and copy the twrp image and the original boot image into it
+ - extract the twrp image: `abootimx -x <twrp image>
+ - replace the initrd in the original image with TWRP: `abootimg -u <original image> -r initrd.img`
 
 And voilá! There we have a LG G7 ThinQ boot image capable of booting TWRP and the respective android version (depending on the version you got the boot image from).
